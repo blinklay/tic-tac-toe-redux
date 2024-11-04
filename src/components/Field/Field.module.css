@@ -1,0 +1,36 @@
+.field {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.field::after {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 100px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid transparent;
+  border-left-color: #000;
+  border-right-color: #000;
+  z-index: -1;
+}
+
+.field::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 300px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: 2px solid transparent;
+  border-top-color: #000;
+  border-bottom-color: #000;
+  z-index: -1;
+}
